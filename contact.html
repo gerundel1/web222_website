@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body style="background-color:#ccffdd;">
+    <div class="navbar1">
+      <div class="logo-container">
+        <img class="logo" src="6edea84dffc69d2c190c427be484143c.png" alt="RPI logo" />
+      </div>
+      <a href="index.html">Home</a>
+      <a href="contact.html">Contact Us</a>
+      <div class="search-container1">
+        <button type="submit"><i class="fa fa-search"></i></button>
+        <input type="text" placeholder="Search.." />
+      </div>
+    </div>
+    <section class="mb-4">
+      <h2 class="h1-responsive font-weight-bold text-center my-4">Contact us</h2>
+      <p class="text-center w-responsive mx-auto mb-5" style="width: 80%;">
+        Do you have any questions? Please do not hesitate to contact us directly. Our team will come
+        back to you within a matter of hours.
+      </p>
+      <form
+        id="contact-form"
+        name="contact-form"
+        action="https://httpbin.org/post"
+        method="POST"
+        style="width: 80%; margin: auto; border-radius:1%; margin-top: 40px;"
+      >
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" class="form-control" name="name" id="name" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" class="form-control" name="email" id="email" required />
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="address">Address</label>
+            <input type="text" class="form-control" name="address" id="address" required />
+          </div>
+          <div class="form-group col-md-4">
+            <label for="city">City</label>
+            <input type="text" class="form-control" list="cities" name="city" id="city" required />
+
+            <datalist id="cities">
+              <option value="Toronto"> </option>
+              <option value="Montreal"> </option>
+              <option value="Ottawa"> </option>
+              <option value="Vancouver"></option>
+              <option value="Halifax"></option>
+              <option value="Quebec"></option>
+              <option value="Calgary"></option>
+            </datalist>
+          </div>
+          <div class="form-group col-md-2">
+            <label for="postal_code">Postal Code</label>
+            <input
+              type="text"
+              class="form-control"
+              name="postal_code"
+              pattern="[A-Z][1-9][A-Z] [1-9][A-Z][1-9]"
+              id="postal_code"
+              required
+            />
+          </div>
+        </div>
+        <fieldset class="form-group">
+          <div class="row">
+            <legend class="col-form-label col-sm-2 pt-0">What is your message about?</legend>
+            <div class="col-sm-10">
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="message-type"
+                  id="gridRadios1"
+                  value="option1"
+                  checked
+                />
+                <label class="form-check-label" for="gridRadios1">
+                  Question
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="message-type"
+                  id="gridRadios2"
+                  value="option2"
+                />
+                <label class="form-check-label" for="gridRadios2">
+                  Comment
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="message-type"
+                  id="gridRadios3"
+                  value="option3"
+                />
+                <label class="form-check-label" for="gridRadios3">
+                  Order Problem
+                </label>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+        <div class="form-group">
+          <label for="message">Enter your message here:</label>
+          <textarea
+            name="message"
+            class="form-control"
+            id="message"
+            cols="50"
+            rows="10"
+            required
+          ></textarea>
+        </div>
+        <div class="form-group">
+          <input type="hidden" name="hidden" value="German" />
+        </div>
+        <button type="submit" class="btn btn-success" value="submit">Submit</button>
+      </form>
+    </section>
+    <footer>
+      <div class="row text-center">
+        <div class="col-md-4">
+          <a class="btn btn-block btn-social btn-facebook">
+            <span class="fa fa-facebook"></span> Sign in with Facebook
+          </a>
+          <a class="btn btn-block btn-social btn-twitter">
+            <span class="fa fa-twitter"></span> Sign in with Twitter
+          </a>
+        </div>
+        <div class="col-md-4">
+          <p class="copy">Copyright © 2020 German Malikov</p>
+        </div>
+        <div class="col-md-4">
+          <form action="https://formspree.io/xaypkzpl" method="POST">
+            <label for="email">Enter your email to subscribe:</label>
+            <input type="email" name="email" id="email1" required />
+            <button type="submit" class="btn btn-danger" value="submit">Submit</button>
+          </form>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
